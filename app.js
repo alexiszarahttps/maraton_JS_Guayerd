@@ -7,31 +7,32 @@ alert("Hola " + nombre.toUpperCase() + ", como estas?");
 
 // Ejercicio 2
 
-var primerNumero = prompt("Ingresa el primer numero: ");
-var segundoNumero = prompt("Ingresa el segundo numero: ");
-var resultadoSuma = parseInt(primerNumero) + parseInt(segundoNumero);
-var resultadoResta = parseInt(primerNumero) - parseInt(segundoNumero);
-
-if (primerNumero < segundoNumero) {
-    let resultadoResta = segundoNumero - primerNumero;
-    let resultadoSuma = primerNumero + segundoNumero;
-    alert("El resultado de la resta es: " + resultadoResta);
-    alert("El resultado de la suma es: " + resultadoSuma);
-} else {
-        resultadoResta = primerNumero - segundoNumero;
-        resultadoSuma = primerNumero + segundoNumero;
-        alert("El resultado de la suma es: " + resultadoSuma);
-        alert("El resultado de la resta es: " + resultadoResta);
-}
-
-
 /*
+
+let num1 = parseInt(prompt("Ingrese el primer numero"));
+let num2 = parseInt(prompt("Ingrese el segundo numero"));
+let suma;
+let resta;
+suma = num1 + num2;
+alert("La suma de los numero es: " + suma);
+if (num1 > num2) {
+  resta = num1 - num2;
+  alert("La resta de los numeros es: " + resta);
+} else {
+  resta = num2 - num1;
+  alert("La resta de los numeros es: " + resta);
+}
 
 // Ejercicio 3
 
-let text = prompt("Ingrese un texto");
-let respuesta = confirm("3333333333333333
-")
+let texto = prompt("Ingrese un texto");
+let respuesta = confirm("Quiere ver el texto en una alerta?");
+if (respuesta === true) {
+    alert(texto.toUpperCase());
+}
+else if (respuesta === false){
+    console.log(texto.toUpperCase());
+}
 
 // Ejercicio 4
 
@@ -47,6 +48,83 @@ alert("Tu resultado en resta es: " + d);
 alert("Tu resultado en potencia es: " + e);
 alert("Tu resultado en division es: " + f);
 
-*/
 
 // Ejercicio 5
+
+let operacion = parseInt(
+  prompt(
+    "¿Que operacion desea realizar? \n 0- Terminar \n 1- Sumar \n 2- Restar \n 3- Multiplicar \n 4- Dividir \n 5- Potenciar"
+  )
+);
+do {
+  let num1 = parseInt(prompt("Ingrese el primer numero"));
+  let num2 = parseInt(prompt("Ingrese el segundo numero"));
+
+  switch (operacion) {
+    case 1:
+      var suma = num1 + num2;
+      console.log("El resultado de la operacion de suma es: " + suma);
+      break;
+    case 2:
+      var resta = num1 - num2;
+      console.log("El resultado de la operacion de resta es: " + resta);
+      break;
+    case 3:
+      var multiplicacion = num1 * num2;
+      console.log(
+        "El resultado de la operacion de multiplicacion es: " + multiplicacion
+      );
+      break;
+    case 4:
+      var division = num1 / num2;
+      console.log("El resultado de la operacion de division es: " + division);
+      break;
+    case 5:
+      var potencia = num1 ** num2;
+      console.log("El resultado de la operacion de potencia es: " + potencia);
+      break;
+    default:
+      console.log("Lo escrito es incorrecta");
+      break;
+  }
+  operacion = parseInt(
+    prompt(
+      "Que operacion desea realizar? \n 0- Terminar \n 1- Sumar \n 2- Restar \n 3- Multiplicar \n 4- Dividir \n 5- Potenciar"
+    )
+  );
+} while (operacion != 0);
+
+// Ejercicio 6
+
+var salir = 'n';
+var alumnos = [];
+do{
+     let name = prompt('Ingrese el nombre de un alumno');
+    if (name != null) {
+        alumnos.push(name);
+    }
+    var seguir = confirm('Quiere ingresar mas alumnos?')
+    if (seguir == true) {
+        salir = 'y';
+    }else {
+        salir = 'n';
+    }
+}while (salir != 'n')
+console.log(alumnos);
+
+// Ejercicio 7
+
+const nombres = [
+  "goku",
+  "mario",
+  "melchor",
+  "mafalda",
+  "cacho",
+  "hermione",
+  "tony",
+  "pappo",
+  "leia",
+  "homero",
+];
+
+*/
